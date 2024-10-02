@@ -3,7 +3,8 @@ $dir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 # シンボリックリンクの設定値リスト
 $linkSettings = @(
-    @{ src = ".wezterm.lua"; dst = "$env:USERPROFILE\.wezterm.lua" }
+    @{ src = ".wezterm.lua"; dst = "$env:USERPROFILE\.wezterm.lua" },
+    @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" }
     # 他の設定値を追加する場合はここに追加
 )
 
