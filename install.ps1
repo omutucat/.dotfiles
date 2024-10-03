@@ -4,7 +4,9 @@ $dir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 # シンボリックリンクの設定値リスト
 $linkSettings = @(
     @{ src = ".wezterm.lua"; dst = "$env:USERPROFILE\.wezterm.lua" },
-    @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" }
+    @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" },
+    @{ src = ".\nu\config.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" },
+    @{ src = ".\nu\env.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\env.nu" }
     # 他の設定値を追加する場合はここに追加
 )
 
@@ -27,3 +29,31 @@ $linkSettings.ForEach({
 
         New-Item -ItemType SymbolicLink -Path $dst -Value $src
     })
+
+# .configディレクトリの作成
+$configDir = "$env:USERPROFILE\.config"
+if (-not (Test-Path "$configDir")) {
+    New-Item -ItemType Directory -Path "$configDir"
+}
+
+# zoxide
+$zoxideConfigDir = "$configDir\zoxide"
+$zoxideInitNu = "$zoxideConfigDir\init.nu"
+if (-not (Test-Path $zoxideConfigDir)) {
+    New-Item -ItemType Directory -Path $zoxideConfigDir
+}
+if (Test-Path "$zoxideInitNu") {
+    Remove-Item "$zoxideInitNu"
+}
+zoxide init nushell | Out-File "$zoxideInitNu"
+
+# starship
+$starshipConfigDir = "$configDir\starship"
+$starshipInitNu = "$starshipConfigDir\init.nu"
+if (-not (Test-Path "$starshipConfigDir")) {
+    New-Item -ItemType Directory -Path "$starshipConfigDir"
+}
+if (Test-Path "$starshipInitNu") {
+    Remove-Item "$starshipInitNu"
+}
+starship init nu | Out-File "$starshipInitNu"
