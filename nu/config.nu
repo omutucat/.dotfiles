@@ -267,7 +267,7 @@ $env.config = {
         # and also helps with the run recent menu in vscode
         osc633: false
         # reset_application_mode is escape \x1b[?1l and was added to help ssh work better
-        reset_application_mode: true
+        reset_application_mode: false
     }
     render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
