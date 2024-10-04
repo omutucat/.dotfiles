@@ -9,6 +9,7 @@ config.color_scheme = "OneHalfDark"
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 config.default_prog = { 'nu' }
+config.window_background_opacity = 0.85
 
 
 return config
