@@ -896,3 +896,5 @@ $env.config = {
         }
     ]
 }
+
+use 'C:\Users\Y-Kumagai\AppData\Roaming\dystroy\broot\config\launcher\nushell\br' *
