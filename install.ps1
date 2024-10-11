@@ -11,6 +11,7 @@ $linkSettings = @(
     @{ src = "nu\config.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" },
     @{ src = "nu\env.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\env.nu" },
     @{ src = "nvim"; dst = "$env:USERPROFILE\AppData\Local\nvim" },
+    @{ src = "helix"; dst = "$env:USERPROFILE\AppData\Roaming\helix" }
     # 他の設定値を追加する場合はここに追加
 )
 
