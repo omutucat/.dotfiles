@@ -1,8 +1,14 @@
+Param (
+    [switch]$InstallPkg = $false
+)
+
 # カレントディレクトリの取得
 $dir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 # winget import
-winget import winget_packages.json --no-upgrade --disable-interactivity
+if ($InstallPkg = $true) {
+    winget import winget_packages.json --no-upgrade --disable-interactivity
+}
 
 # シンボリックリンクの設定値リスト
 $linkSettings = @(
