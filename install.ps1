@@ -8,8 +8,7 @@ winget import winget_packages.json --no-upgrade --disable-interactivity
 $linkSettings = @(
     @{ src = ".wezterm.lua"; dst = "$env:USERPROFILE\.wezterm.lua" },
     @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" },
-    @{ src = "nu\config.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" },
-    @{ src = "nu\env.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\env.nu" },
+    @{ src = "nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell" },
     @{ src = "nvim"; dst = "$env:USERPROFILE\AppData\Local\nvim" },
     @{ src = "helix"; dst = "$env:USERPROFILE\AppData\Roaming\helix" }
     # 他の設定値を追加する場合はここに追加
