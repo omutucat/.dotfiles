@@ -8,3 +8,19 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 indent = { tab-width = 4, unit = " " }
 language-servers = [ "omnisharp" ]
+
+[[language]]
+name = "fsharp"
+scope = "source.fs"
+roots = ["sln", "fsproj"]
+injection-regex = "fsharp"
+file-types = ["fs", "fsx", "fsi", "fsscript"]
+comment-token = "//"
+block-comment-tokens = { start = "(*", end = "*)" }
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+language-servers = ["fsharp-ls"]
+
+[[grammar]]
+name = "fsharp"
+source = { git = "https://github.com/ionide/tree-sitter-fsharp", rev = "996ea9982bd4e490029f84682016b6793940113b" }
