@@ -16,7 +16,9 @@ $linkSettings = @(
     @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" },
     @{ src = "nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell" },
     @{ src = "nvim"; dst = "$env:USERPROFILE\AppData\Local\nvim" },
-    @{ src = "helix"; dst = "$env:USERPROFILE\AppData\Roaming\helix" }
+    @{ src = "helix"; dst = "$env:USERPROFILE\AppData\Roaming\helix" },
+    @{ src = "broot\conf.hjson"; dst = "$env:USERPROFILE\AppData\Roaming\dystroy\broot\config\conf.hjson" },
+    @{ src = "broot\verbs.hjson"; dst = "$env:USERPROFILE\AppData\Roaming\dystroy\broot\config\verbs.hjson" }
     # 他の設定値を追加する場合はここに追加
 )
 
