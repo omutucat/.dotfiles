@@ -1,8 +1,14 @@
+Param (
+    [switch]$InstallPkg = $false
+)
+
 # カレントディレクトリの取得
 $dir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 # winget import
-winget import winget_packages.json --no-upgrade --disable-interactivity
+if ($InstallPkg = $true) {
+    winget import winget_packages.json --no-upgrade --disable-interactivity
+}
 
 # シンボリックリンクの設定値リスト
 $linkSettings = @(
@@ -10,6 +16,10 @@ $linkSettings = @(
     @{ src = "Microsoft.PowerShell_profile.ps1"; dst = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" },
     @{ src = "nu\config.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" },
     @{ src = "nu\env.nu"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\env.nu" },
+    @{ src = "nu\custom_commands"; dst = "$env:USERPROFILE\AppData\Roaming\nushell\custom_commands" },
+    @{ src = "helix"; dst = "$env:USERPROFILE\AppData\Roaming\helix" },
+    @{ src = "broot\conf.hjson"; dst = "$env:USERPROFILE\AppData\Roaming\dystroy\broot\config\conf.hjson" },
+    @{ src = "broot\verbs.hjson"; dst = "$env:USERPROFILE\AppData\Roaming\dystroy\broot\config\verbs.hjson" },
     @{ src = "LazyVimSettings"; dst = "$env:USERPROFILE\AppData\Local\nvim" }
     # 他の設定値を追加する場合はここに追加
 )
