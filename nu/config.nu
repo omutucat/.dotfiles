@@ -6,6 +6,10 @@
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
 # https://github.com/nushell/nu_scripts/tree/main/themes
+
+source conf.d/index.nu
+use functions/
+
 let dark_theme = {
     # color for nushell primitives
     separator: white
