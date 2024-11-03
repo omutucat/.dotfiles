@@ -9,7 +9,6 @@ if (Test-Path $secretHookPath) {
 Invoke-Expression (& { (starship init powershell | Out-String) })
 # zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-Enable-PsFzfAliases
 
 # EDITOR
 $env:EDITOR = "code"
