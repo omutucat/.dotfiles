@@ -115,3 +115,6 @@ function Update-SvnRepos {
     }
 }
 Set-Alias usvn Update-SvnRepos
+
+# fnm setup
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
