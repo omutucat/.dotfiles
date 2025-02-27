@@ -1,59 +1,65 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-05T15:42:27.861-00:00",
-	"Sources" : 
-	[
-		{
-			"Packages" : 
-			[
-				{
-					"PackageIdentifier" : "Git.Git"
-				},
-				{
-					"PackageIdentifier" : "Neovim.Neovim"
-				},
-				{
-					"PackageIdentifier" : "wez.wezterm"
-				},
-				{
-					"PackageIdentifier" : "Starship.Starship"
-				},
-				{
-					"PackageIdentifier" : "Nushell.Nushell"
-				},
-				{
-					"PackageIdentifier" : "AlDanial.Cloc"
-				},
-				{
-					"PackageIdentifier" : "BurntSushi.ripgrep.MSVC"
-				},
-				{
-					"PackageIdentifier" : "JesseDuffield.lazygit"
-				},
-				{
-					"PackageIdentifier" : "ajeetdsouza.zoxide"
-				},
-				{
-					"PackageIdentifier" : "junegunn.fzf"
-				},
-				{
-					"PackageIdentifier" : "sharkdp.bat"
-				},
-				{
-					"PackageIdentifier" : "voidtools.Everything.Cli"
-				},
+    "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+    "CreationDate": "2024-10-05T15:42:27.861-00:00",
+    "Sources": [
+        {
+            "Packages": [
                 {
-					"PackageIdentifier" : "Dystroy.broot"
+                    "PackageIdentifier": "Git.Git"
+                },
+                {
+                    "PackageIdentifier": "Neovim.Neovim"
+                },
+                {
+                    "PackageIdentifier": "wez.wezterm"
+                },
+                {
+                    "PackageIdentifier": "Starship.Starship"
+                },
+                {
+                    "PackageIdentifier": "Nushell.Nushell"
+                },
+                {
+                    "PackageIdentifier": "AlDanial.Cloc"
+                },
+                {
+                    "PackageIdentifier": "BurntSushi.ripgrep.MSVC"
+                },
+                {
+                    "PackageIdentifier": "JesseDuffield.lazygit"
+                },
+                {
+                    "PackageIdentifier": "ajeetdsouza.zoxide"
+                },
+                {
+                    "PackageIdentifier": "junegunn.fzf"
+                },
+                {
+                    "PackageIdentifier": "sharkdp.bat"
+                },
+                {
+                    "PackageIdentifier": "voidtools.Everything.Cli"
+                },
+                {
+                    "PackageIdentifier": "Dystroy.broot"
+                },
+                {
+                    "PackageIdentifier": "Clement.bottom"
+                },
+                {
+                    "PackageIdentifier": "Helix.Helix"
+                },
+                {
+                    "PackageIdentifier": "jdx.mise"
                 }
-			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://cdn.winget.microsoft.com/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
-			}
-		}
-	],
-	"WinGetVersion" : "1.8.1911"
+            ],
+            "SourceDetails": {
+                "Argument": "https://cdn.winget.microsoft.com/cache",
+                "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+                "Name": "winget",
+                "Type": "Microsoft.PreIndexed.Package"
+            }
+        }
+    ],
+    "WinGetVersion": "1.8.1911"
 }
